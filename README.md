@@ -2,7 +2,8 @@
 
 Welcome to the Todo App, an interactive web-based application designed to help you manage and prioritize your tasks efficiently. It's simple, user-friendly, and built with state-of-the-art technologies.
 
-![Example Image](https://drive.google.com/file/d/10-Vnu0WtWTmuJg8QErLzy-B-NxRElgEb/view?usp=sharing) 
+<img width="400" alt="Screenshot 2023" src="https://github.com/svetlanamar/todo_list/assets/79169058/b8177860-ea71-475b-950b-ff0e2d55113a">
+
 
 ## Manage Your Tasks
 
