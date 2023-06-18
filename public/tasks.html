@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="taskFormContainer" class="box mint">
+            <h1>New Task</h1>
+            <form id="taskForm">
+                <input id="taskInput" type="text" placeholder="Enter a new task" required>
+                <select id="priorityInput">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+        <div id="currentTasksContainer" class="box blue">
+            <h1>Current Tasks</h1>
+            <ul id="taskList"></ul>
+        </div>
+        <div id="completedTasksContainer" class="box grey">
+            <h1>Completed Tasks</h1>
+            <ul id="completedTaskList"></ul>
+        </div>
+        <div id="pollContainer" class="box purple">
+            <h1>Poll</h1>
+            <!-- Poll options will be inserted here -->
+        </div>
+    </div>
+    <script src="./js/tasks.js"></script>
+</body>
+</html>
