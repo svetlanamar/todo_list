@@ -8,6 +8,13 @@
 </head>
 <body>
     <div class="container">
+        <div class="user-menu">
+            <button id="loginButton" class="user-menu-button">Login</button>
+            <button id="signupButton" class="user-menu-button">Sign Up</button>
+            <div id="userProfile" style="display: none;">
+                <!-- User profile information will be inserted here -->
+            </div>
+        </div>
         <div id="taskFormContainer" class="box mint">
             <h1>New Task</h1>
             <form id="taskForm">
@@ -33,6 +40,37 @@
             <!-- Poll options will be inserted here -->
         </div>
     </div>
+
+    <!-- Login Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form id="loginForm">
+        <label for="loginUsername">Username:</label><br>
+        <input type="text" id="loginUsername" name="loginUsername"><br>
+        <label for="loginPassword">Password:</label><br>
+        <input type="password" id="loginPassword" name="loginPassword"><br>
+        <input type="submit" value="Login">
+      </form>
+    </div>
+  </div>
+  
+  <!-- Sign Up Modal -->
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form id="signupForm">
+        <label for="signupUsername">Username:</label><br>
+        <input type="text" id="signupUsername" name="signupUsername"><br>
+        <label for="signupEmail">Email:</label><br>
+        <input type="email" id="signupEmail" name="signupEmail"><br>
+        <label for="signupPassword">Password:</label><br>
+        <input type="password" id="signupPassword" name="signupPassword"><br>
+        <input type="submit" value="Sign Up">
+      </form>
+    </div>
+  </div>
+  
     <script src="./js/tasks.js"></script>
 </body>
 </html>

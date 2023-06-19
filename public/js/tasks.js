@@ -111,3 +111,94 @@ function submitVote() {
         });
     }
 }
+
+// Get the modals
+var loginModal = document.getElementById('loginModal');
+var signupModal = document.getElementById('signupModal');
+
+// Get the button that opens the modals
+var loginButton = document.getElementById('loginButton');
+var signupButton = document.getElementById('signupButton');
+
+// Get the <span> element that closes the modals
+var loginClose = document.getElementsByClassName("close")[0];
+var signupClose = document.getElementsByClassName("close")[1];
+
+// Get the forms
+var loginForm = document.getElementById('loginForm');
+var signupForm = document.getElementById('signupForm');
+
+// When the user clicks on the button, open the modal
+loginButton.onclick = function() {
+  loginModal.style.display = "block";
+}
+
+signupButton.onclick = function() {
+  signupModal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+loginClose.onclick = function() {
+  loginModal.style.display = "none";
+}
+
+signupClose.onclick = function() {
+  signupModal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == loginModal) {
+    loginModal.style.display = "none";
+  }
+  if (event.target == signupModal) {
+    signupModal.style.display = "none";
+  }
+}
+
+// Add event listeners to the forms
+loginForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const username = document.getElementById('loginUsername').value;
+  const password = document.getElementById('loginPassword').value;
+
+  fetch('/login', { //tried the /login instead
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ username, password })
+  })
+  .then(response => response.json())
+  .then(data => {
+    // Handle response here
+    console.log(data);
+    loginModal.style.display = "none";
+  })
+  .catch(error => console.error('Error:', error));
+});
+
+signupForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const username = document.getElementById('signupUsername').value;
+  const email = document.getElementById('signupEmail').value;
+  const password = document.getElementById('signupPassword').value;
+
+  fetch('/signup', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ username, email, password })
+  })
+  .then(response => response.json())
+  .then(data => {
+    // Handle response here
+    console.log(data);
+    signupModal.style.display = "none";
+  })
+  .catch(error => console.error('Error:', error));
+});
+
