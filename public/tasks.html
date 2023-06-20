@@ -36,7 +36,7 @@
             <ul id="completedTaskList"></ul>
         </div>
         <div id="pollContainer" class="box purple">
-            <h1>Poll</h1>
+            <h1>Vote for the best</h1>
             <!-- Poll options will be inserted here -->
         </div>
     </div>
@@ -45,12 +45,14 @@
 <div id="loginModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <form id="loginForm">
-        <label for="loginUsername">Username:</label><br>
-        <input type="text" id="loginUsername" name="loginUsername"><br>
-        <label for="loginPassword">Password:</label><br>
-        <input type="password" id="loginPassword" name="loginPassword"><br>
-        <input type="submit" value="Login">
+      <form id="loginForm" class="login-form">
+        <label for="loginUsername">Username</label>
+        <input type="text" id="loginUsername" required>
+      
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" required>
+      
+        <button type="submit">Login</button>
       </form>
     </div>
   </div>
@@ -59,15 +61,19 @@
   <div id="signupModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <form id="signupForm">
-        <label for="signupUsername">Username:</label><br>
-        <input type="text" id="signupUsername" name="signupUsername"><br>
-        <label for="signupEmail">Email:</label><br>
-        <input type="email" id="signupEmail" name="signupEmail"><br>
-        <label for="signupPassword">Password:</label><br>
-        <input type="password" id="signupPassword" name="signupPassword"><br>
-        <input type="submit" value="Sign Up">
+      <form id="signupForm" class="signup-form">
+        <label for="signupUsername">Username:</label>
+        <input type="text" id="signupUsername" placeholder="Enter your username" required>
+      
+        <label for="signupEmail">Email:</label>
+        <input type="email" id="signupEmail" placeholder="Enter your email" required>
+      
+        <label for="signupPassword">Password:</label>
+        <input type="password" id="signupPassword" placeholder="Enter your password" required>
+      
+        <button type="submit">Sign Up</button>
       </form>
+      
     </div>
   </div>
   
