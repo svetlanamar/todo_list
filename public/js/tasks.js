@@ -74,6 +74,9 @@ taskForm.addEventListener('submit', function(e) {
 
 function updatePollOptions(completedTasks) {
     pollContainer.innerHTML = '';
+    const h1 = document.createElement('h1');
+  h1.textContent = 'Vote for the best';
+  pollContainer.appendChild(h1);
     completedTasks.forEach(task => {
         const label = document.createElement('label');
         const radio = document.createElement('input');
@@ -88,6 +91,7 @@ function updatePollOptions(completedTasks) {
 
     const button = document.createElement('button');
     button.textContent = 'Vote';
+    button.classList.add('vote-button'); // Add the "vote-button" class
     button.addEventListener('click', submitVote);
     pollContainer.appendChild(button);
 }
@@ -113,20 +117,20 @@ function submitVote() {
 }
 
 // Get the modals
-var loginModal = document.getElementById('loginModal');
-var signupModal = document.getElementById('signupModal');
+let loginModal = document.getElementById('loginModal');
+let signupModal = document.getElementById('signupModal');
 
 // Get the button that opens the modals
-var loginButton = document.getElementById('loginButton');
-var signupButton = document.getElementById('signupButton');
+let loginButton = document.getElementById('loginButton');
+let signupButton = document.getElementById('signupButton');
 
 // Get the <span> element that closes the modals
-var loginClose = document.getElementsByClassName("close")[0];
-var signupClose = document.getElementsByClassName("close")[1];
+let loginClose = document.getElementsByClassName("close")[0];
+let signupClose = document.getElementsByClassName("close")[1];
 
 // Get the forms
-var loginForm = document.getElementById('loginForm');
-var signupForm = document.getElementById('signupForm');
+let loginForm = document.getElementById('loginForm');
+let signupForm = document.getElementById('signupForm');
 
 // When the user clicks on the button, open the modal
 loginButton.onclick = function() {

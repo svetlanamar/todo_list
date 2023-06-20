@@ -38,6 +38,7 @@ body {
     background-color: #D8BFD8;
 }
 
+
 form {
     display: flex;
     flex-direction: column;
@@ -52,7 +53,7 @@ input[type=text], select {
 }
 
 button {
-    background-color: #800000;
+    background-color: #000000;
     color: white;
     padding: 10px 20px;
     text-align: center;
@@ -79,14 +80,15 @@ button:hover {
 }
 
 .user-menu-button {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     border: none;
     color: white;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block; /* Changed from "inline-block" to "block" */
+    width: 100%; /* Added width */
     font-size: 16px;
-    margin: 4px 2px;
+    margin-bottom: 4px; /* Added margin-bottom */
     transition-duration: 0.4s;
     cursor: pointer;
 }
@@ -134,4 +136,58 @@ button:hover {
     text-decoration: none;
     cursor: pointer;
   }
+
+button.vote-button {
+    background-color: #000000;
+    color: white;
+    padding: 8px 14px;
+    font-size: 16px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    text-align: center;
+    display: block; /* Change display to "block" */
+    margin: 0 auto; /* Add margin: 0 auto; to center horizontally */
+    margin-top: 30px;
+    width: fit-content;
+}
+
+button.vote-button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  display: block;
+  width: 70%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 8px; /* Adjust the padding value as needed */
+  box-sizing: border-box; /* Include padding in the element's total width */
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 8px; /* Adjust the padding value as needed */
+  box-sizing: border-box; /* Include padding in the element's total width */
+}
+
+/* Medium screens */
+@media (min-width: 577px) and (max-width: 768px) {
+    .container {
+      padding: 0 20px;
+    }
+  }
   
+  /* Large screens */
+  @media (min-width: 769px) {
+    .container {
+      padding: 0 30px;
+    }
+  }
+
