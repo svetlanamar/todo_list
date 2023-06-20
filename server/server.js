@@ -18,7 +18,7 @@ app.use(session({
 app.use(bodyParser.json());  // Parse JSON body
 app.use(express.static(path.join(__dirname, '..', 'public')));  // Serve static files
 
-// Put the routes after the middleware
+// The routes after the middleware
 tasksRoutes(app);
 pollRoutes(app);
 userRoutes(app);

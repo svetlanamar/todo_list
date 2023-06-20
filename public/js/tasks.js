@@ -163,7 +163,7 @@ loginForm.addEventListener('submit', function(e) {
   const username = document.getElementById('loginUsername').value;
   const password = document.getElementById('loginPassword').value;
 
-  fetch('/login', { //tried the /login instead
+  fetch('/login', { 
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
